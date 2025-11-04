@@ -1,0 +1,36 @@
+<div class="min-h-screen bg-gray-100">
+  <!-- Header/Navigation -->
+  <nav class="bg-white shadow-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-8">
+          <h1 class="text-2xl font-bold text-blue-600">Gestion Stations</h1>
+          <div class="flex space-x-4">
+            <a routerLink="/stations"
+               routerLinkActive="text-blue-600 border-b-2 border-blue-600"
+               class="px-3 py-2 text-gray-700 hover:text-blue-600 transition duration-200">
+              Stations
+            </a>
+            <a routerLink="/carburants"
+               routerLinkActive="text-green-600 border-b-2 border-green-600"
+               [routerLinkActiveOptions]="{exact: false}"
+               class="px-3 py-2 text-gray-700 hover:text-green-600 transition duration-200">
+               Carburants
+            </a>
+            <a routerLink="/histocarb"
+                     routerLinkActive="text-purple-600 border-b-2 border-purple-600"
+                     [routerLinkActiveOptions]="{exact: false}"
+                     class="px-3 py-2 text-gray-700 hover:text-purple-600 transition duration-200">
+            Historique Prix
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
